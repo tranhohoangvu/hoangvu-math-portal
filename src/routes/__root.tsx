@@ -5,6 +5,8 @@ import {
   Scripts,
 } from "@tanstack/react-router";
 import { Toaster } from "sonner";
+import { AppErrorComponent } from "@/lib/error-component";
+import { NotFoundComponent } from "@/lib/not-found-component";
 import appCss from "../styles.css?url";
 
 const APP_NAME = "Cơ sở dạy thêm Trần Hoàng Vũ · Toán THCS Cô Hoa";
@@ -39,6 +41,8 @@ export const Route = createRootRoute({
     ],
   }),
   component: RootDocument,
+  notFoundComponent: NotFoundComponent,
+  errorComponent: AppErrorComponent,
 });
 
 function RootDocument() {
