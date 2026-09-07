@@ -350,6 +350,31 @@
     animation: light-beam 3.5s ease-in-out infinite;
     pointer-events: none;
   }
+
+  .shimmer-btn-gold {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(135deg, #c4961a 0%, #e0b84a 50%, #c4961a 100%) !important;
+    color: #081f45 !important;
+  }
+
+  .shimmer-btn-gold::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -120%;
+    width: 60%;
+    height: 100%;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.5),
+      transparent
+    );
+    transform: skewX(-25deg);
+    animation: light-beam 3.2s ease-in-out infinite;
+    pointer-events: none;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {

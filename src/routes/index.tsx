@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import {
   ArrowRight,
   BookOpen,
+  Calendar,
   CheckCircle2,
   Clock,
   MapPin,
@@ -17,7 +18,7 @@ import { Footer } from "@/components/footer";
 import { Nav } from "@/components/nav";
 import { TodayProblem } from "@/components/today-problem";
 import { Button } from "@/components/ui/button";
-import { FAQS, HOURS, PROGRAMS, SITE, TEACHER_INFO } from "@/lib/site";
+import { FAQS, HOURS, PROGRAMS, SCHEDULE_NOTE, SITE, TEACHER_INFO } from "@/lib/site";
 
 export const Route = createFileRoute("/")({ component: Home });
 
@@ -504,19 +505,25 @@ function EnrollSection() {
               </details>
             ))}
           </div>
-          <div className="mt-8 space-y-2 text-sm text-ink-muted">
-            {HOURS.map((h) => (
-              <p key={h.day} className="flex items-center gap-2">
-                <Clock className="size-4 text-gold" />
-                <span>
-                  {h.day}: <span className="text-ink">{h.time}</span>
+          <div className="mt-8 rounded-xl bg-cream/70 p-4 border border-gold/35 space-y-2.5 shadow-sm">
+            <div className="flex items-center justify-between gap-2">
+              <div className="flex items-center gap-2">
+                <Calendar className="size-4 text-gold" />
+                <span className="text-xs font-bold uppercase tracking-wider text-navy">
+                  {SCHEDULE_NOTE.title}
                 </span>
-              </p>
-            ))}
-            <p className="pt-1 text-xs">
-              Lịch cụ thể xếp theo từng lớp — vui lòng liên hệ Cô Hoa trước khi
-              đến.
+              </div>
+              <span className="rounded-full bg-gold/20 px-2.5 py-0.5 text-[11px] font-semibold text-gold-soft border border-gold/40">
+                {SCHEDULE_NOTE.status}
+              </span>
+            </div>
+            <p className="text-xs sm:text-sm leading-relaxed text-ink-muted text-justify">
+              {SCHEDULE_NOTE.description}
             </p>
+            <div className="pt-1.5 border-t border-line/60 flex items-center gap-1.5 text-[11px] text-navy font-medium">
+              <span className="text-gold">✦</span>
+              <span>{SCHEDULE_NOTE.flexibility}</span>
+            </div>
           </div>
         </div>
         <div className="lg:col-span-3">

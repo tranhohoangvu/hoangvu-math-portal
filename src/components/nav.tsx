@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Menu, Phone, X } from "lucide-react";
+import { Menu, Phone, Sparkles, X } from "lucide-react";
 import { Logo } from "@/components/logo";
 import { Button } from "@/components/ui/button";
 import { SITE } from "@/lib/site";
@@ -8,7 +8,6 @@ import { cn } from "@/lib/utils";
 const LINKS = [
   { href: "/#co-giao", label: "Về Cô Hoa", highlight: true },
   { href: "/#chuong-trinh", label: "Chương trình học" },
-  { href: "/#dang-ky", label: "Đăng ký" },
   { href: "/#lien-he", label: "Địa chỉ" },
 ];
 
@@ -38,7 +37,8 @@ export function Nav() {
             </a>
           ))}
         </nav>
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-2 sm:gap-2.5">
+          {/* Nút Gọi điện (Nền xanh Navy lấp lánh như cũ) */}
           <Button
             asChild
             size="sm"
@@ -49,6 +49,19 @@ export function Nav() {
               <span>{SITE.phoneDisplay}</span>
             </a>
           </Button>
+
+          {/* Nút Đăng ký học nổi bật (Primary Action) */}
+          <Button
+            asChild
+            size="sm"
+            className="shimmer-btn-gold font-display font-bold shadow-md shadow-gold/25 hover:shadow-lg hover:shadow-gold/40 hover:scale-105 active:scale-95 transition-all duration-200 border border-gold-soft/60 px-3.5"
+          >
+            <a href="/#dang-ky" className="flex items-center gap-1.5 text-xs sm:text-sm">
+              <Sparkles className="size-3.5 fill-current text-navy-deep animate-pulse" />
+              <span>Đăng ký học</span>
+            </a>
+          </Button>
+
           <button
             type="button"
             className="md:hidden inline-flex size-11 items-center justify-center rounded-md text-navy"
@@ -63,27 +76,39 @@ export function Nav() {
       <div
         className={cn(
           "md:hidden overflow-hidden border-t border-line bg-paper transition-[max-height,opacity] duration-200 ease-out",
-          open ? "max-h-80 opacity-100" : "max-h-0 opacity-0",
+          open ? "max-h-96 opacity-100" : "max-h-0 opacity-0",
         )}
       >
-        <nav className="flex flex-col px-4 py-3" aria-label="Di động">
+        <nav className="flex flex-col px-4 py-4 space-y-1" aria-label="Di động">
           {LINKS.map((item) => (
             <a
               key={item.label}
               href={item.href}
               onClick={() => setOpen(false)}
-              className="flex min-h-11 items-center text-base font-medium text-ink no-underline"
+              className="flex min-h-11 items-center text-base font-medium text-ink hover:text-navy no-underline"
             >
               {item.label}
             </a>
           ))}
-          <a
-            href={SITE.tel}
-            className="mt-1 flex min-h-11 items-center gap-2 text-base font-medium text-navy no-underline group"
-          >
-            <Phone className="size-4 animate-phone-ring text-gold" />
-            Gọi {SITE.phoneDisplay}
-          </a>
+          <div className="pt-3 border-t border-line flex flex-col gap-2.5">
+            <Button
+              asChild
+              className="shimmer-btn-gold w-full font-display font-bold shadow-md justify-center py-2.5 text-sm"
+              onClick={() => setOpen(false)}
+            >
+              <a href="/#dang-ky" className="flex items-center justify-center gap-2">
+                <Sparkles className="size-4 fill-current text-navy-deep animate-pulse" />
+                <span>Đăng ký học ngay</span>
+              </a>
+            </Button>
+            <a
+              href={SITE.tel}
+              className="flex min-h-11 items-center justify-center gap-2 text-sm font-medium text-navy bg-cream/70 rounded-md border border-line no-underline group"
+            >
+              <Phone className="size-4 animate-phone-ring text-gold" />
+              Gọi Cô Hoa: {SITE.phoneDisplay}
+            </a>
+          </div>
         </nav>
       </div>
     </header>

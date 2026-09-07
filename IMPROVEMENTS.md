@@ -16,7 +16,7 @@ Tài liệu này tổng hợp toàn bộ các ý tưởng, đề xuất cải ti
   - *Mô tả*: Thêm thanh nút bấm hoặc cụm icon nổi cố định ở góc dưới màn hình gồm 2 nút: **Gọi ngay (`0914 694 426`)** và **Nhắn Zalo**.
   - *Lợi ích*: Phụ huynh lướt web trên điện thoại ở bất kỳ vị trí nào cũng có thể chạm gọi hoặc chat với cô Hoa ngay tức thì.
 
-- [ ] **Nâng cấp Form Đăng ký & Tích hợp QR Zalo**
+- [x] **Nâng cấp Form Đăng ký & Tích hợp QR Zalo**
   - *Mô tả*: 
     - Hiển thị thêm **Mã QR Zalo của cô Hoa** ngay cạnh nút Soạn tin nhắn để phụ huynh mở app Zalo quét kết bạn trực tiếp trên máy tính.
     - Bổ sung ô chọn thời gian học mong muốn (*Tối trong tuần / Cuối tuần*).
@@ -70,7 +70,7 @@ Tài liệu này tổng hợp toàn bộ các ý tưởng, đề xuất cải ti
 
 ### 🔹 Giai đoạn 1: Tiện ích tuyển sinh thực dụng (Làm trước)
 - [x] 1. Thêm nút Gọi / Zalo nổi góc màn hình mobile (Floating Contact Bar / FAB).
-- [ ] 2. Thêm QR Code Zalo vào form đăng ký.
+- [x] 2. Thêm QR Code Zalo vào form đăng ký.
 - [x] 3. Nhúng khung Google Maps tại mục Địa chỉ.
 
 ### 🔹 Giai đoạn 2: Tăng tính tương tác học tập & Uy tín

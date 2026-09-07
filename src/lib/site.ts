@@ -103,9 +103,17 @@ export const PROGRAMS = [
   },
 ] as const;
 
+export const SCHEDULE_NOTE = {
+  title: "Lịch học các khối lớp",
+  status: "Công bố khi xếp lớp",
+  description:
+    "Thời khóa biểu cụ thể sẽ được cô Hoa thống nhất và thông báo trực tiếp tới phụ huynh sau khi chốt danh sách học sinh từng khối (Lớp 6, 7, 8, 9 & Luyện thi vào 10).",
+  flexibility:
+    "Giờ học được bố trí linh hoạt ngoài giờ chính khóa, tạo điều kiện thuận lợi nhất cho việc học tập và đưa đón của phụ huynh.",
+} as const;
+
 export const HOURS = [
-  { day: "Thứ 2 – Thứ 6", time: "17:30 – 20:30" },
-  { day: "Thứ 7 – Chủ nhật", time: "08:00 – 11:00" },
+  { day: "Lịch học dự kiến", time: "Sẽ công bố chi tiết sau khi xếp lớp" },
 ] as const;
 
 export const FAQS = [
@@ -158,17 +166,34 @@ export const PROBLEMS = [
   },
 ] as const;
 
+export const LEARNING_GOALS = [
+  { id: "lay-goc", label: "Lấy lại căn bản, bù hổng kiến thức" },
+  { id: "nang-cao", label: "Nâng cao điểm số trên lớp (8–9+)" },
+  { id: "vao-10", label: "Luyện thi tuyển sinh vào lớp 10" },
+  { id: "hsg", label: "Bồi dưỡng Học sinh giỏi (HSG)" },
+] as const;
+
+export const TIME_PREFERENCES = [
+  { id: "toi-trong-tuan", label: "Tối trong tuần (sau giờ học chính khóa)" },
+  { id: "cuoi-tuan", label: "Cuối tuần (Thứ 7 / Chủ nhật)" },
+  { id: "linh-hoat", label: "Linh hoạt theo lịch xếp chung của lớp" },
+] as const;
+
 export function composeMessage(input: {
   parent: string;
   student: string;
   program: string;
+  goal?: string;
+  timeSlot?: string;
   phone: string;
   note: string;
 }) {
   const lines = [
     `Dạ cô Hoa, em muốn đăng ký học Toán tại Trung tâm Trần Hoàng Vũ.`,
     input.student ? `Học sinh: ${input.student}.` : "",
-    input.program ? `Chương trình: ${input.program}.` : "",
+    input.program ? `Khóa học: ${input.program}.` : "",
+    input.goal ? `Mục tiêu: ${input.goal}.` : "",
+    input.timeSlot ? `Thời gian mong muốn: ${input.timeSlot}.` : "",
     input.parent ? `Phụ huynh: ${input.parent}.` : "",
     input.phone ? `SĐT: ${input.phone}.` : "",
     input.note ? `Ghi chú: ${input.note}.` : "",
