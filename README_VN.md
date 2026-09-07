@@ -2,11 +2,14 @@
 
 [English Version](./README.md) | **Tiếng Việt**
 
+[![Trực tiếp Website](https://img.shields.io/badge/Tr%E1%BB%B1c_ti%E1%BA%BFp-hoangvumathcenter.vercel.app-00DC82?style=for-the-badge&logo=vercel&logoColor=white)](https://hoangvumathcenter.vercel.app/)
 [![Vite](https://img.shields.io/badge/Vite-8.x-646CFF?style=for-the-badge&logo=vite&logoColor=white)](https://vitejs.dev/)
 [![React](https://img.shields.io/badge/React-19.x-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://react.dev/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.7-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 [![Tailwind CSS v4](https://img.shields.io/badge/Tailwind_CSS-v4-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
 [![TanStack Router](https://img.shields.io/badge/TanStack_Router-v1-FF4154?style=for-the-badge&logo=react-query&logoColor=white)](https://tanstack.com/router)
+
+> 🌐 **Địa chỉ truy cập trực tiếp**: [https://hoangvumathcenter.vercel.app/](https://hoangvumathcenter.vercel.app/)
 
 Ứng dụng web Single Page Application (SPA) hiệu năng cao, xây dựng trên nền tảng **React 19**, **TypeScript**, **Tailwind CSS v4**, và **TanStack Router**. Dự án được thiết kế theo hệ thống Design System phong cách Editorial, tối ưu trải nghiệm người dùng, hỗ trợ đầy đủ accessibility (a11y) và kiểm soát chặt chẽ kiểu dữ liệu (Strict Type Safety).
 
@@ -152,10 +155,12 @@ Các biến màu sắc và kích thước được khai báo trong [`src/styles.
 
 ## 🚢 Hướng Dẫn Triển Khai (Deployment)
 
-Dự án được build thành mã nguồn tĩnh (Static SPA) thuần túy, tương thích hoàn toàn với mọi nền tảng lưu trữ tĩnh:
+Website hiện đang hoạt động trực tiếp tại: **[https://hoangvumathcenter.vercel.app/](https://hoangvumathcenter.vercel.app/)**
 
-- **Vercel**: Liên kết với repository GitHub; Build command: `npm run build`, Output directory: `dist`.
-- **Cloudflare Pages / Netlify / GitHub Pages**: Chọn thư mục build đầu ra là `dist`.
+Dự án được vận hành bởi **TanStack Start** cùng **Nitro Engine** trên nền tảng **Vercel**:
+- **Địa chỉ Online**: [https://hoangvumathcenter.vercel.app/](https://hoangvumathcenter.vercel.app/)
+- **Vercel**: Tự động triển khai Serverless Functions và Static Assets qua Nitro plugin khi đẩy code lên nhánh `main`.
+- **Cloudflare Pages / Netlify**: Hỗ trợ sẵn sàng qua các preset của Nitro.
 
 ---
 

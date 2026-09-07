@@ -2,11 +2,14 @@
 
 **English** | [Tiếng Việt](./README_VN.md)
 
+[![Live Demo](https://img.shields.io/badge/Live_Demo-hoangvumathcenter.vercel.app-00DC82?style=for-the-badge&logo=vercel&logoColor=white)](https://hoangvumathcenter.vercel.app/)
 [![Vite](https://img.shields.io/badge/Vite-8.x-646CFF?style=for-the-badge&logo=vite&logoColor=white)](https://vitejs.dev/)
 [![React](https://img.shields.io/badge/React-19.x-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://react.dev/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.7-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 [![Tailwind CSS v4](https://img.shields.io/badge/Tailwind_CSS-v4-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
 [![TanStack Router](https://img.shields.io/badge/TanStack_Router-v1-FF4154?style=for-the-badge&logo=react-query&logoColor=white)](https://tanstack.com/router)
+
+> 🌐 **Live Website**: [https://hoangvumathcenter.vercel.app/](https://hoangvumathcenter.vercel.app/)
 
 A modern, high-performance, responsive single-page web portal built with **React 19**, **TypeScript**, **Tailwind CSS v4**, and **TanStack Router**. Designed with an editorial design system, strict type safety, accessible UI primitives, and optimized client-side performance.
 
@@ -151,14 +154,16 @@ The design tokens are declared in [`src/styles.css`](src/styles.css) via `@theme
 ---
 
 ## 🚢 Deployment
+ 
+ The project is deployed and live at: **[https://hoangvumathcenter.vercel.app/](https://hoangvumathcenter.vercel.app/)**
 
-The project builds as a purely static Single Page Application (SPA) compatible with any static hosting platform:
-
-- **Vercel**: Connect the GitHub repository; build command: `npm run build`, output directory: `dist`.
-- **Cloudflare Pages / Netlify / GitHub Pages**: Deploy using `dist` as the build output directory.
-
----
-
-## 📄 License
+ Powered by **TanStack Start** with **Nitro Engine** on **Vercel**:
+ - **Live URL**: [https://hoangvumathcenter.vercel.app/](https://hoangvumathcenter.vercel.app/)
+ - **Vercel**: Connect the GitHub repository; automatic serverless & edge deployment via Nitro.
+ - **Cloudflare Pages / Netlify**: Compatible out-of-the-box with Nitro presets.
+ 
+ ---
+ 
+ ## 📄 License
 
 This project is proprietary and maintained for internal operations. All rights reserved.
