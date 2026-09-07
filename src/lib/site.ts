@@ -1,6 +1,6 @@
 export const SITE = {
   name: "Trần Hoàng Vũ",
-  kind: "Cơ sở dạy thêm",
+  kind: "Trung tâm Bồi dưỡng Kiến thức",
   subject: "Bồi dưỡng kiến thức môn Toán THCS",
   tagline: "Toán THCS — dạy thật, hiểu thật.",
   teacher: "Cô Hồ Thị Hoa",
@@ -25,10 +25,10 @@ export const TEACHER_INFO = {
   shortName: "Cô Hoa",
   role: "Giáo viên môn Toán",
   primaryWorkplace: "Trường TH & THCS Hoàng Văn Thụ",
-  tutoringPlace: "Cơ sở dạy thêm Trần Hoàng Vũ",
+  tutoringPlace: "Trung tâm Bồi dưỡng Kiến thức Trần Hoàng Vũ",
   title: "Giáo viên Toán tại Trường TH & THCS Hoàng Văn Thụ",
   experience:
-    "Công tác giảng dạy chính quy tại Trường TH & THCS Hoàng Văn Thụ · Trực tiếp bồi dưỡng ngoài giờ tại Cơ sở dạy thêm Trần Hoàng Vũ (Thôn Tân An / Thôn 8 cũ, Ea Kiết)",
+    "Công tác giảng dạy chính quy tại Trường TH & THCS Hoàng Văn Thụ · Trực tiếp bồi dưỡng ngoài giờ tại Trung tâm Bồi dưỡng Kiến thức Trần Hoàng Vũ (Thôn Tân An / Thôn 8 cũ, Ea Kiết)",
   quote:
     "Với tôi, không có học sinh nào dốt Toán. Chỉ cần tìm đúng phương pháp, kiên nhẫn tháo gỡ từng nút thắt và khơi gợi tư duy, các con đều sẽ yêu thích và làm chủ môn học này.",
   philosophy: [
@@ -47,12 +47,12 @@ export const TEACHER_INFO = {
   ],
   commitments: [
     "Cô Hồ Thị Hoa trực tiếp giảng dạy 100% tất cả các buổi — không giao lớp cho người khác hay trợ giảng.",
-    "Quy mô lớp nhỏ, số lượng học sinh ít tại cơ sở dạy thêm để cô theo sát bài vở từng em.",
+    "Quy mô lớp nhỏ, số lượng học sinh ít tại trung tâm để cô theo sát bài vở từng em.",
     "Báo cáo tiến độ minh bạch sau từng tuần, kết nối trực tiếp giữa phụ huynh và cô giáo.",
   ],
   highlights: [
     { num: "Chính quy", label: "Trường Hoàng Văn Thụ", desc: "Nơi công tác chính của cô" },
-    { num: "100%", label: "Cô trực tiếp dạy", desc: "Tại cơ sở dạy thêm Trần Hoàng Vũ" },
+    { num: "100%", label: "Cô trực tiếp dạy", desc: "Tại Trung tâm Trần Hoàng Vũ" },
     { num: "Lớp nhỏ", label: "Số lượng ít kèm sát", desc: "Chữa bài tận tay trên lớp" },
     { num: "Lớp 6–9", label: "Bồi dưỡng & Vào 10", desc: "Bám sát chuẩn GDPT mới" },
   ],
@@ -166,7 +166,7 @@ export function composeMessage(input: {
   note: string;
 }) {
   const lines = [
-    `Dạ cô Hoa, em muốn đăng ký học Toán tại cơ sở Trần Hoàng Vũ.`,
+    `Dạ cô Hoa, em muốn đăng ký học Toán tại Trung tâm Trần Hoàng Vũ.`,
     input.student ? `Học sinh: ${input.student}.` : "",
     input.program ? `Chương trình: ${input.program}.` : "",
     input.parent ? `Phụ huynh: ${input.parent}.` : "",

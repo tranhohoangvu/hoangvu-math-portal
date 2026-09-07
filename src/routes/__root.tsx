@@ -9,9 +9,9 @@ import { AppErrorComponent } from "@/lib/error-component";
 import { NotFoundComponent } from "@/lib/not-found-component";
 import appCss from "../styles.css?url";
 
-const APP_NAME = "Cơ sở dạy thêm Trần Hoàng Vũ · Toán THCS Cô Hoa";
+const APP_NAME = "Trung tâm Bồi dưỡng Kiến thức Trần Hoàng Vũ · Toán THCS Cô Hoa";
 const APP_DESC =
-  "Cơ sở dạy thêm môn Toán THCS tại Ea Kiết, Đắk Lắk do cô Hồ Thị Hoa (Giáo viên Trường TH & THCS Hoàng Văn Thụ) trực tiếp giảng dạy, bồi dưỡng học sinh lớp 6–9, ôn HSG và luyện thi vào 10.";
+  "Trung tâm Bồi dưỡng Kiến thức môn Toán THCS tại Ea Kiết, Đắk Lắk do cô Hồ Thị Hoa (Giáo viên Trường TH & THCS Hoàng Văn Thụ) trực tiếp giảng dạy, bồi dưỡng học sinh lớp 6–9, ôn HSG và luyện thi vào 10.";
 
 export const Route = createRootRoute({
   head: () => ({

@@ -81,10 +81,10 @@ function Hero() {
             <span>Cô Hồ Thị Hoa trực tiếp giảng dạy</span>
           </div>
           <p className="text-xs font-semibold uppercase tracking-[0.28em] text-gold-soft">
-            {SITE.kind} {SITE.name} · Ea Kiết, Đắk Lắk
+            {SITE.kind} · Ea Kiết, Đắk Lắk
           </p>
           <h1 className="mt-2 font-display text-[clamp(2.6rem,8vw,5.2rem)] font-semibold leading-[0.95] tracking-tight text-cream">
-            Trần Hoàng Vũ
+            {SITE.name}
           </h1>
           <p className="mt-5 max-w-lg text-lg leading-relaxed text-chalk sm:text-xl text-justify">
             {SITE.tagline} Lớp bồi dưỡng do{" "}
@@ -92,7 +92,7 @@ function Hero() {
               cô Hồ Thị Hoa
             </strong>{" "}
             (Giáo viên môn Toán tại Trường TH & THCS Hoàng Văn Thụ) trực tiếp đứng
-            lớp tại Cơ sở dạy thêm Trần Hoàng Vũ — kèm sát từng em lớp{" "}
+            lớp tại Trung tâm Bồi dưỡng Kiến thức Trần Hoàng Vũ — kèm sát từng em lớp{" "}
             {SITE.grades}, bồi dưỡng học sinh giỏi và luyện thi đỗ vào lớp 10.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
@@ -144,10 +144,10 @@ function Hero() {
             </div>
             <div className="flex items-start gap-2.5">
               <span className="font-semibold text-gold-soft shrink-0">
-                Dạy thêm:
+                Địa điểm học:
               </span>
               <span className="text-cream">
-                Cơ sở dạy thêm Trần Hoàng Vũ
+                Trung tâm Bồi dưỡng Kiến thức Trần Hoàng Vũ
                 <span className="block text-xs text-chalk/90 sm:text-sm">
                   (Thôn Tân An — Thôn 8 cũ, Ea Kiết)
                 </span>
@@ -192,7 +192,7 @@ function GoldRibbon() {
     <div className="flex items-center gap-6 text-sm font-semibold tracking-wide text-navy-deep sm:text-base font-display">
       <span>
         {SITE.subject} — Cô Hồ Thị Hoa (GV Trường TH & THCS Hoàng Văn Thụ) trực tiếp đứng
-        lớp tại Cơ sở dạy thêm Trần Hoàng Vũ
+        lớp tại Trung tâm Bồi dưỡng Kiến thức Trần Hoàng Vũ
       </span>
       <span className="text-navy-deep/60">✦</span>
       <span className="font-bold">Lớp nhỏ kèm sát từng bài</span>
@@ -219,7 +219,7 @@ function Why() {
     {
       icon: Users,
       title: "Lớp nhỏ, kèm sát từng bài",
-      body: "Không phải lớp đại trà đông đúc. Cô giáo ngồi cạnh từng em tại cơ sở dạy thêm, chữa từng bài tập, hướng dẫn kiên nhẫn cho đến khi con thực sự hiểu bản chất.",
+      body: "Không phải lớp đại trà đông đúc. Cô giáo ngồi cạnh từng em tại trung tâm, chữa từng bài tập, hướng dẫn kiên nhẫn cho đến khi con thực sự hiểu bản chất.",
     },
     {
       icon: BookOpen,
@@ -284,7 +284,7 @@ function Teacher() {
             . Ngoài giờ lên lớp, cô trực tiếp phụ trách bồi dưỡng kiến thức môn
             Toán cho các em học sinh THCS tại{" "}
             <strong className="text-gold-soft">
-              Cơ sở dạy thêm Trần Hoàng Vũ
+              Trung tâm Bồi dưỡng Kiến thức Trần Hoàng Vũ
             </strong>{" "}
             (Thôn Tân An — Thôn 8 cũ, Ea Kiết). Không qua trung gian hay trợ giảng — cô trực tiếp
             kèm cặp, chữa từng bài và rèn từng bước lập luận cho con.
@@ -298,7 +298,7 @@ function Teacher() {
             <div className="relative group overflow-hidden rounded-2xl border-2 border-gold/40 shadow-2xl shadow-navy-deep/70 transition-all duration-300 hover:border-gold hover:shadow-[0_20px_50px_rgba(196,150,26,0.2)]">
               <img
                 src="/images/co-hoa.jpg"
-                alt="Cô Hoa - Giáo viên Toán Trường TH & THCS Hoàng Văn Thụ, dạy bồi dưỡng tại Cơ sở Trần Hoàng Vũ"
+                alt="Cô Hoa - Giáo viên Toán Trường TH & THCS Hoàng Văn Thụ, dạy bồi dưỡng tại Trung tâm Trần Hoàng Vũ"
                 className="w-full aspect-[4/3] object-cover transition-transform duration-700 group-hover:scale-108"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-navy-deep/95 via-navy-deep/25 to-transparent" />
@@ -310,11 +310,11 @@ function Teacher() {
                   {TEACHER_INFO.title}
                 </p>
                 <p className="text-[11px] text-chalk/80">
-                  Dạy bồi dưỡng tại Cơ sở dạy thêm Trần Hoàng Vũ
+                  Dạy bồi dưỡng tại Trung tâm Bồi dưỡng Kiến thức Trần Hoàng Vũ
                 </p>
               </div>
               <div className="absolute top-3 right-3 rounded-full bg-navy-deep/90 px-3 py-1 text-[11px] font-semibold text-gold-soft border border-gold/40 backdrop-blur-sm shadow-sm">
-                Đứng lớp 100% tại cơ sở
+                Đứng lớp 100% tại trung tâm
               </div>
             </div>
 
@@ -352,8 +352,8 @@ function Teacher() {
                 <div>
                   <p className="text-sm font-semibold text-cream">Cô Hồ Thị Hoa</p>
                   <p className="text-xs text-gold-soft">
-                    Giáo viên Trường TH & THCS Hoàng Văn Thụ · Giảng dạy tại Cơ sở
-                    dạy thêm Trần Hoàng Vũ
+                    Giáo viên Trường TH & THCS Hoàng Văn Thụ · Giảng dạy tại Trung tâm
+                    Bồi dưỡng Kiến thức Trần Hoàng Vũ
                   </p>
                 </div>
               </div>
@@ -387,7 +387,7 @@ function Teacher() {
             {/* 3 Commitments */}
             <div className="rounded-xl bg-navy/40 border border-line p-5">
               <h3 className="text-xs font-semibold uppercase tracking-[0.2em] text-gold-soft mb-3">
-                3 Cam kết của cô giáo tại Cơ sở dạy thêm Trần Hoàng Vũ
+                3 Cam kết của cô giáo tại Trung tâm Trần Hoàng Vũ
               </h3>
               <ul className="space-y-2.5">
                 {TEACHER_INFO.commitments.map((c) => (
@@ -535,7 +535,7 @@ function Place() {
     >
       <img
         src="/images/house.jpg"
-        alt="Nhà mái ngói ở Tây Nguyên, nơi đặt cơ sở dạy thêm Trần Hoàng Vũ"
+        alt="Nhà mái ngói ở Tây Nguyên, nơi đặt Trung tâm Bồi dưỡng Kiến thức Trần Hoàng Vũ"
         className="absolute inset-0 size-full object-cover opacity-25"
       />
       <div className="absolute inset-0 bg-navy-deep/80" />
@@ -543,10 +543,10 @@ function Place() {
         <div className="grid items-center gap-10 lg:grid-cols-12">
           <div className="lg:col-span-6">
             <p className="text-xs font-medium uppercase tracking-[0.18em] text-gold-soft">
-              Địa chỉ cơ sở dạy thêm
+              Địa chỉ trung tâm
             </p>
             <h2 className="mt-3 font-display text-3xl font-semibold tracking-tight sm:text-4xl lg:text-5xl text-cream">
-              Cơ sở dạy thêm Trần Hoàng Vũ
+              Trung tâm Bồi dưỡng Kiến thức Trần Hoàng Vũ
             </h2>
 
             {/* Address Box showing both new and old address */}
@@ -618,7 +618,7 @@ function Place() {
                 </a>
               </div>
               <iframe
-                title="Vị trí Cơ sở dạy thêm Trần Hoàng Vũ trên Google Maps"
+                title="Vị trí Trung tâm Bồi dưỡng Kiến thức Trần Hoàng Vũ trên Google Maps"
                 src={SITE.mapsEmbed}
                 className="h-72 w-full border-0 sm:h-80"
                 loading="lazy"

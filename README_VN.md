@@ -14,13 +14,13 @@
 
 ## 📌 Giới Thiệu Tổng Quan
 
-**Hoang Vu Math Portal** là cổng thông tin và tuyển sinh trực tuyến cho **Cơ sở bồi dưỡng Toán THCS Trần Hoàng Vũ**.
+**Hoang Vu Math Portal** là cổng thông tin và tuyển sinh trực tuyến cho **Trung tâm Bồi dưỡng Kiến thức Trần Hoàng Vũ**.
 
-Trang web đóng vai trò cầu nối số hóa giữa cơ sở giáo dục với phụ huynh và học sinh:
+Trang web đóng vai trò cầu nối số hóa giữa trung tâm với phụ huynh và học sinh:
 - **Tra cứu chương trình học**: Xem chi tiết lộ trình Toán các khối 6, 7, 8, 9, bồi dưỡng HSG và ôn thi vào 10.
 - **Đăng ký tuyển sinh trực tuyến**: Biểu mẫu thông minh tự động soạn tin nhắn mẫu để gửi qua Zalo hoặc gọi hotline.
 - **Tương tác học tập**: Thử sức nhanh với widget *"Câu hỏi hôm nay"* theo từng khối lớp.
-- **Chỉ đường & Liên hệ nhanh**: Tích hợp Google Maps định vị cơ sở và thanh công cụ liên hệ đa kênh (Hotline, Zalo, QR Code) tối ưu cho cả máy tính và điện thoại.
+- **Chỉ đường & Liên hệ nhanh**: Tích hợp Google Maps định vị trung tâm và thanh công cụ liên hệ đa kênh (Hotline, Zalo, QR Code) tối ưu cho cả máy tính và điện thoại.
 
 ---
 

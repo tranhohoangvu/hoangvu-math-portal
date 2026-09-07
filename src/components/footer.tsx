@@ -9,7 +9,7 @@ export function Footer() {
         <div>
           <Logo tone="cream" />
           <p className="mt-4 max-w-xs text-sm leading-relaxed text-chalk text-justify">
-            Cơ sở dạy thêm Toán THCS tại Ea Kiết do cô Hồ Thị Hoa (Giáo viên Trường TH & THCS Hoàng Văn Thụ) trực tiếp giảng dạy và kèm cặp.
+            Trung tâm Bồi dưỡng Kiến thức {SITE.name} Toán THCS tại Ea Kiết do cô Hồ Thị Hoa (Giáo viên Trường TH & THCS Hoàng Văn Thụ) trực tiếp giảng dạy và kèm cặp.
           </p>
         </div>
         <div>
