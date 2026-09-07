@@ -189,7 +189,8 @@
     }
   }
 
-  .animate-phone-ring {
+  .animate-phone-ring,
+  a[href^="tel:"] .lucide-phone {
     animation: phone-ring 3s cubic-bezier(0.36, 0.07, 0.19, 0.97) infinite;
     transform-origin: center center;
     display: inline-block;
@@ -202,7 +203,8 @@
 
   .animate-phone-ring:hover,
   .group:hover .animate-phone-ring,
-  .animate-fab-shake:hover {
+  .animate-fab-shake:hover,
+  a[href^="tel:"]:hover .lucide-phone {
     animation-play-state: paused;
   }
 

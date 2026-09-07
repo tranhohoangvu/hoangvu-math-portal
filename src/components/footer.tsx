@@ -18,9 +18,9 @@ export function Footer() {
           </p>
           <a
             href={SITE.tel}
-            className="mt-3 flex items-start gap-2 text-sm text-cream no-underline hover:text-gold-soft"
+            className="mt-3 flex items-start gap-2 text-sm text-cream no-underline hover:text-gold-soft group"
           >
-            <Phone className="mt-0.5 size-4 shrink-0" />
+            <Phone className="mt-0.5 size-4 shrink-0 animate-phone-ring text-gold-soft" />
             {SITE.teacher} · {SITE.phoneDisplay}
           </a>
           <a

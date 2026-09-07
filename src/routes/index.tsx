@@ -70,9 +70,9 @@ function Hero() {
             {SITE.grades}, bồi dưỡng học sinh giỏi và luyện thi đỗ vào lớp 10.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
-            <Button asChild variant="gold" size="lg">
+            <Button asChild variant="gold" size="lg" className="group">
               <a href={SITE.tel}>
-                <Phone className="size-4" />
+                <Phone className="size-4 animate-phone-ring" />
                 Gọi Cô Hoa: {SITE.phoneDisplay}
               </a>
             </Button>
@@ -377,9 +377,9 @@ function Teacher() {
 
             {/* Direct Action Buttons */}
             <div className="flex flex-wrap items-center gap-3 pt-2">
-              <Button asChild variant="gold" size="lg">
+              <Button asChild variant="gold" size="lg" className="group">
                 <a href={SITE.tel}>
-                  <Phone className="size-4" />
+                  <Phone className="size-4 animate-phone-ring" />
                   Gọi trao đổi với Cô ({SITE.phoneDisplay})
                 </a>
               </Button>
@@ -555,9 +555,9 @@ function Place() {
                   Mở Google Maps chỉ đường
                 </a>
               </Button>
-              <Button asChild variant="cream" size="lg">
+              <Button asChild variant="cream" size="lg" className="group">
                 <a href={SITE.tel}>
-                  <Phone className="size-4" />
+                  <Phone className="size-4 animate-phone-ring" />
                   Gọi hỏi đường ({SITE.phoneDisplay})
                 </a>
               </Button>

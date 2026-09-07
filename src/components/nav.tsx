@@ -75,9 +75,9 @@ export function Nav() {
           ))}
           <a
             href={SITE.tel}
-            className="mt-1 flex min-h-11 items-center gap-2 text-base font-medium text-navy no-underline"
+            className="mt-1 flex min-h-11 items-center gap-2 text-base font-medium text-navy no-underline group"
           >
-            <Phone className="size-4" />
+            <Phone className="size-4 animate-phone-ring text-gold" />
             Gọi {SITE.phoneDisplay}
           </a>
         </nav>

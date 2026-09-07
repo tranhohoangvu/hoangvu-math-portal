@@ -155,9 +155,9 @@ export function EnrollForm() {
                 Mở Zalo
               </a>
             </Button>
-            <Button asChild variant="outline" size="sm">
+            <Button asChild variant="outline" size="sm" className="group">
               <a href={SITE.tel}>
-                <Phone className="size-4" />
+                <Phone className="size-4 animate-phone-ring text-gold" />
                 Gọi cô Hoa
               </a>
             </Button>
