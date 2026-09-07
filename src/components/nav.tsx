@@ -39,9 +39,9 @@ export function Nav() {
           ))}
         </nav>
         <div className="flex items-center gap-2">
-          <Button asChild size="sm" className="hidden sm:inline-flex">
+          <Button asChild size="sm" className="hidden sm:inline-flex group">
             <a href={SITE.tel}>
-              <Phone className="size-4" />
+              <Phone className="size-4 animate-phone-ring text-gold-soft" />
               {SITE.phoneDisplay}
             </a>
           </Button>

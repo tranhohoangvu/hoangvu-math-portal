@@ -10,6 +10,7 @@ import {
 } from "lucide-react";
 import { toast } from "sonner";
 import { SITE } from "@/lib/site";
+import { cn } from "@/lib/utils";
 
 export function FloatingContact() {
   const [showScrollTop, setShowScrollTop] = useState(false);
@@ -185,7 +186,10 @@ export function FloatingContact() {
         <button
           type="button"
           onClick={() => setIsDesktopOpen(!isDesktopOpen)}
-          className="group relative flex size-14 items-center justify-center rounded-full bg-navy-deep p-0.5 shadow-2xl ring-4 ring-gold/80 transition-all duration-300 hover:scale-105 hover:ring-gold active:scale-95"
+          className={cn(
+            "group relative flex size-14 items-center justify-center rounded-full bg-navy-deep p-0.5 shadow-2xl ring-4 ring-gold/80 transition-all duration-300 hover:scale-105 hover:ring-gold active:scale-95",
+            !isDesktopOpen && "animate-fab-shake animate-pulse-ring",
+          )}
           title={isDesktopOpen ? "Đóng menu liên hệ" : "Nhấn để liên hệ Cô Hoa"}
           aria-expanded={isDesktopOpen}
           aria-label="Liên hệ trực tiếp với Cô Hồ Thị Hoa"
