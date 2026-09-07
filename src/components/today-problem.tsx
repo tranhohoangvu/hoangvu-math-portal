@@ -35,37 +35,51 @@ export function TodayProblem() {
           </p>
           <p className="mt-4 text-sm text-chalk">Gợi ý: {problem.hint}</p>
           <div
-            className="mt-6 min-h-14 rounded-md bg-navy px-4 py-3 text-base"
+            className="mt-6 min-h-14 rounded-xl bg-navy/90 p-4 text-base border border-line transition-all duration-300"
             aria-live="polite"
           >
             {show ? (
-              <span>
-                Đáp án: <strong className="text-gold-soft">{problem.answer}</strong>
-              </span>
+              <div className="flex items-center gap-2 animate-in fade-in zoom-in-95 duration-200">
+                <span className="text-gold-soft">✦</span>
+                <span>
+                  Đáp án:{" "}
+                  <strong className="text-gold-soft font-bold text-lg">
+                    {problem.answer}
+                  </strong>
+                </span>
+              </div>
             ) : (
-              <span className="text-chalk">Ẩn đáp án — thử làm trước đã.</span>
+              <span className="text-chalk/80 italic text-sm">
+                Ẩn đáp án — thử nháp ra giấy trước nhé! ✏️
+              </span>
             )}
           </div>
-          <div className="mt-5 flex flex-wrap gap-2">
+          <div className="mt-5 flex flex-wrap gap-3">
             <Button
               variant="gold"
               size="sm"
               type="button"
+              className="group shadow-md hover:scale-105 transition-all"
               onClick={() => setShow((v) => !v)}
             >
-              {show ? <EyeOff className="size-4" /> : <Eye className="size-4" />}
+              {show ? (
+                <EyeOff className="size-4" />
+              ) : (
+                <Eye className="size-4 group-hover:scale-110 transition-transform" />
+              )}
               {show ? "Ẩn đáp án" : "Xem đáp án"}
             </Button>
             <Button
               variant="ghost"
               size="sm"
               type="button"
+              className="group text-cream hover:text-gold-soft hover:bg-navy/60 transition-all"
               onClick={() => {
                 setShow(false);
                 setIndex((i) => (i + 1) % PROBLEMS.length);
               }}
             >
-              <RefreshCw className="size-4" />
+              <RefreshCw className="size-4 group-hover:rotate-180 transition-transform duration-500" />
               Câu khác
             </Button>
           </div>

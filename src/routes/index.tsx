@@ -48,10 +48,36 @@ function Hero() {
         className="absolute inset-0 size-full object-cover opacity-35"
       />
       <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(8,31,69,0.95)_0%,rgba(8,31,69,0.82)_55%,rgba(8,31,69,0.5)_100%)]" />
+
+      {/* Floating Math Symbols Background Animation */}
+      <div
+        className="pointer-events-none absolute inset-0 overflow-hidden select-none opacity-20"
+        aria-hidden="true"
+      >
+        <span className="absolute top-10 left-[8%] font-display text-4xl text-gold-soft animate-float-slow">
+          ∑
+        </span>
+        <span className="absolute top-24 right-[12%] font-display text-3xl text-cream animate-float-reverse">
+          π
+        </span>
+        <span className="absolute bottom-28 left-[18%] font-display text-3xl text-gold animate-float-slow">
+          √x
+        </span>
+        <span className="absolute bottom-16 right-[24%] font-display text-4xl text-gold-soft animate-float-reverse">
+          Δ
+        </span>
+        <span className="absolute top-40 left-[42%] font-display text-2xl text-chalk animate-float-slow">
+          x²
+        </span>
+        <span className="absolute bottom-36 right-[6%] font-display text-3xl text-cream animate-float-reverse">
+          ∫
+        </span>
+      </div>
+
       <div className="relative mx-auto flex max-w-6xl flex-col gap-10 px-4 py-16 sm:px-6 sm:py-24 lg:flex-row lg:items-end lg:py-28">
         <div className="max-w-2xl">
-          <div className="inline-flex items-center gap-2 rounded-full bg-gold/15 border border-gold/40 px-3.5 py-1 text-xs font-semibold text-gold-soft mb-4 backdrop-blur-sm shadow-sm">
-            <Sparkles className="size-3.5 text-gold" />
+          <div className="inline-flex items-center gap-2 rounded-full bg-gold/15 border border-gold/40 px-3.5 py-1 text-xs font-semibold text-gold-soft mb-4 backdrop-blur-sm shadow-sm shimmer-badge">
+            <Sparkles className="size-3.5 text-gold animate-pulse" />
             <span>Cô Hồ Thị Hoa trực tiếp giảng dạy</span>
           </div>
           <p className="text-xs font-semibold uppercase tracking-[0.28em] text-gold-soft">
@@ -70,22 +96,22 @@ function Hero() {
             {SITE.grades}, bồi dưỡng học sinh giỏi và luyện thi đỗ vào lớp 10.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
-            <Button asChild variant="gold" size="lg" className="group">
+            <Button asChild variant="gold" size="lg" className="group shadow-lg hover:shadow-gold/30 transition-all duration-300 hover:scale-[1.02]">
               <a href={SITE.tel}>
                 <Phone className="size-4 animate-phone-ring" />
                 Gọi Cô Hoa: {SITE.phoneDisplay}
               </a>
             </Button>
-            <Button asChild variant="cream" size="lg">
+            <Button asChild variant="cream" size="lg" className="group hover:scale-[1.02] transition-transform">
               <a href="#co-giao">
                 Gặp gỡ cô giáo
-                <ArrowRight className="size-4" />
+                <ArrowRight className="size-4 group-hover:translate-x-1 transition-transform" />
               </a>
             </Button>
           </div>
         </div>
         {/* Teacher & Tutoring Info Card */}
-        <div className="w-full max-w-lg lg:max-w-[490px] rounded-2xl bg-navy/85 p-6 sm:p-7 backdrop-blur-md border border-gold/30 shadow-2xl space-y-5">
+        <div className="relative w-full max-w-lg lg:max-w-[490px] rounded-2xl bg-navy/85 p-6 sm:p-7 backdrop-blur-md border border-gold/30 shadow-2xl space-y-5">
           <div className="flex items-center gap-4">
             <div className="relative size-16 shrink-0 overflow-hidden rounded-full ring-2 ring-gold shadow-md">
               <img
@@ -93,11 +119,12 @@ function Hero() {
                 alt="Cô Hoa"
                 className="size-full object-cover"
               />
-              <span className="absolute bottom-0 right-0 size-3 rounded-full bg-emerald-500 ring-2 ring-navy-deep" />
+              <span className="absolute bottom-0 right-0 size-3.5 rounded-full bg-emerald-500 ring-2 ring-navy-deep" />
             </div>
             <div>
-              <div className="inline-flex items-center gap-1 rounded bg-gold/15 px-2.5 py-0.5 text-xs font-semibold text-gold-soft border border-gold/30">
-                Giáo viên trực tiếp đứng lớp
+              <div className="inline-flex items-center gap-1.5 rounded-full px-2.5 py-0.5 text-xs font-semibold text-gold-soft border border-gold/40 shimmer-badge-mini backdrop-blur-sm">
+                <span className="inline-block size-1.5 rounded-full bg-gold animate-pulse" />
+                <span>Giáo viên trực tiếp đứng lớp</span>
               </div>
               <h3 className="mt-1 font-display text-2xl font-bold text-cream">
                 Cô Hồ Thị Hoa
@@ -211,12 +238,12 @@ function Why() {
         {items.map((item) => (
           <article
             key={item.title}
-            className="rounded-xl bg-paper p-6 shadow-[var(--shadow-card)] border border-line/60 transition-all duration-200 hover:-translate-y-1 hover:shadow-lg"
+            className="group rounded-xl bg-paper p-6 shadow-[var(--shadow-card)] border border-line/60 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:border-gold/60"
           >
-            <div className="size-10 rounded-lg bg-gold/15 flex items-center justify-center border border-gold/30">
-              <item.icon className="size-5 text-gold" strokeWidth={1.8} />
+            <div className="size-11 rounded-xl bg-gold/15 flex items-center justify-center border border-gold/30 transition-all duration-300 group-hover:scale-110 group-hover:rotate-6 group-hover:bg-gold/25 group-hover:border-gold/60">
+              <item.icon className="size-5 text-gold" strokeWidth={2} />
             </div>
-            <h2 className="mt-4 font-display text-2xl font-semibold text-navy">
+            <h2 className="mt-4 font-display text-2xl font-semibold text-navy group-hover:text-navy-mid transition-colors">
               {item.title}
             </h2>
             <p className="mt-2 text-sm leading-relaxed text-ink-muted text-justify">
@@ -236,14 +263,14 @@ function Teacher() {
       className="relative isolate overflow-hidden bg-navy-deep text-cream scroll-mt-20 py-16 sm:py-20 lg:py-24"
     >
       {/* Background glow elements */}
-      <div className="pointer-events-none absolute -left-32 top-1/4 size-96 rounded-full bg-gold/10 blur-3xl" />
-      <div className="pointer-events-none absolute -right-32 bottom-10 size-96 rounded-full bg-navy-mid/40 blur-3xl" />
+      <div className="pointer-events-none absolute -left-32 top-1/4 size-96 rounded-full bg-gold/10 blur-3xl animate-soft-glow" />
+      <div className="pointer-events-none absolute -right-32 bottom-10 size-96 rounded-full bg-navy-mid/40 blur-3xl animate-soft-glow" />
 
       <div className="relative mx-auto max-w-6xl px-4 sm:px-6">
         {/* Section Header */}
         <div className="max-w-3xl">
-          <div className="inline-flex items-center gap-2 rounded-full bg-gold/15 border border-gold/40 px-3.5 py-1 text-xs font-semibold text-gold-soft backdrop-blur-sm">
-            <Sparkles className="size-3.5 text-gold" />
+          <div className="inline-flex items-center gap-2 rounded-full bg-gold/15 border border-gold/40 px-3.5 py-1 text-xs font-semibold text-gold-soft backdrop-blur-sm shimmer-badge">
+            <Sparkles className="size-3.5 text-gold animate-pulse" />
             <span>GIÁO VIÊN TRỰC TIẾP ĐỨNG LỚP</span>
           </div>
           <h2 className="mt-3 font-display text-3xl font-semibold tracking-tight sm:text-5xl text-cream">
@@ -268,11 +295,11 @@ function Teacher() {
         <div className="mt-12 grid gap-10 lg:grid-cols-12 lg:items-start">
           {/* Left: Teacher Portrait & Stats */}
           <div className="lg:col-span-5 space-y-6">
-            <div className="relative group overflow-hidden rounded-2xl border-2 border-gold/40 shadow-2xl shadow-navy-deep/70">
+            <div className="relative group overflow-hidden rounded-2xl border-2 border-gold/40 shadow-2xl shadow-navy-deep/70 transition-all duration-300 hover:border-gold hover:shadow-[0_20px_50px_rgba(196,150,26,0.2)]">
               <img
                 src="/images/co-hoa.jpg"
                 alt="Cô Hoa - Giáo viên Toán Trường TH & THCS Hoàng Văn Thụ, dạy bồi dưỡng tại Cơ sở Trần Hoàng Vũ"
-                className="w-full aspect-[4/3] object-cover transition-transform duration-500 group-hover:scale-105"
+                className="w-full aspect-[4/3] object-cover transition-transform duration-700 group-hover:scale-108"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-navy-deep/95 via-navy-deep/25 to-transparent" />
               <div className="absolute bottom-4 left-4 right-4 text-cream">
@@ -296,9 +323,9 @@ function Teacher() {
               {TEACHER_INFO.highlights.map((h) => (
                 <div
                   key={h.label}
-                  className="rounded-xl bg-navy/60 border border-line p-3.5 backdrop-blur-sm"
+                  className="group rounded-xl bg-navy/60 border border-line p-3.5 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-gold/50 hover:bg-navy/80"
                 >
-                  <p className="font-display text-base font-bold text-gold-soft sm:text-lg">
+                  <p className="font-display text-base font-bold text-gold-soft sm:text-lg group-hover:scale-105 transition-transform origin-left">
                     {h.num}
                   </p>
                   <p className="mt-0.5 text-xs font-semibold text-cream">
@@ -341,12 +368,12 @@ function Teacher() {
                 {TEACHER_INFO.philosophy.map((item, idx) => (
                   <div
                     key={item.title}
-                    className="rounded-xl bg-navy/50 border border-line p-4 transition-colors hover:border-gold/40"
+                    className="group rounded-xl bg-navy/50 border border-line p-4 transition-all duration-300 hover:-translate-y-1 hover:border-gold/50 hover:bg-navy/70"
                   >
-                    <div className="size-7 rounded-lg bg-gold/15 flex items-center justify-center text-xs font-bold text-gold border border-gold/30 mb-2.5">
+                    <div className="size-7 rounded-lg bg-gold/15 flex items-center justify-center text-xs font-bold text-gold border border-gold/30 mb-2.5 group-hover:scale-110 group-hover:bg-gold/25 transition-all">
                       0{idx + 1}
                     </div>
-                    <h4 className="font-display text-base font-semibold text-cream">
+                    <h4 className="font-display text-base font-semibold text-cream group-hover:text-gold-soft transition-colors">
                       {item.title}
                     </h4>
                     <p className="mt-1.5 text-xs leading-relaxed text-chalk/90 text-justify">
@@ -377,15 +404,15 @@ function Teacher() {
 
             {/* Direct Action Buttons */}
             <div className="flex flex-wrap items-center gap-3 pt-2">
-              <Button asChild variant="gold" size="lg" className="group">
+              <Button asChild variant="gold" size="lg" className="group shadow-lg hover:shadow-gold/30 transition-all duration-300 hover:scale-[1.02]">
                 <a href={SITE.tel}>
                   <Phone className="size-4 animate-phone-ring" />
                   Gọi trao đổi với Cô ({SITE.phoneDisplay})
                 </a>
               </Button>
-              <Button asChild variant="cream" size="lg">
+              <Button asChild variant="cream" size="lg" className="group hover:scale-[1.02] transition-transform animate-pulse-zalo">
                 <a href={SITE.zalo} target="_blank" rel="noreferrer">
-                  <MessageCircle className="size-4" />
+                  <MessageCircle className="size-4 group-hover:scale-110 transition-transform" />
                   Nhắn Zalo cho Cô Hoa
                 </a>
               </Button>
@@ -415,11 +442,11 @@ function Programs() {
           {PROGRAMS.map((p) => (
             <article
               key={p.id}
-              className="group relative overflow-hidden rounded-xl bg-cream p-6 shadow-[var(--shadow-card)] border border-line/60 transition-all duration-200 hover:-translate-y-1 hover:shadow-lg"
+              className="group relative overflow-hidden rounded-xl bg-cream p-6 shadow-[var(--shadow-card)] border border-line/60 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:border-gold/60"
             >
               <span
                 aria-hidden
-                className="pointer-events-none absolute -right-1 -top-3 font-display text-6xl font-semibold text-navy/10 group-hover:text-gold/20 transition-colors"
+                className="pointer-events-none absolute -right-1 -top-3 font-display text-6xl font-semibold text-navy/10 group-hover:text-gold/25 group-hover:scale-110 transition-all duration-300"
               >
                 {p.grade}
               </span>
@@ -431,7 +458,7 @@ function Programs() {
                   Kèm sát từng em
                 </span>
               </div>
-              <h3 className="mt-2 font-display text-2xl font-semibold text-navy">
+              <h3 className="mt-2 font-display text-2xl font-semibold text-navy group-hover:text-navy-mid transition-colors">
                 {p.title}
               </h3>
               <p className="mt-2 text-sm leading-relaxed text-ink-muted text-justify">
@@ -439,7 +466,7 @@ function Programs() {
               </p>
               <div className="mt-4 pt-3 border-t border-line/60 flex items-center justify-between text-xs text-navy font-medium">
                 <span>Lớp nhỏ, số lượng ít</span>
-                <span className="text-gold group-hover:translate-x-0.5 transition-transform">
+                <span className="text-gold font-semibold group-hover:translate-x-1.5 transition-transform duration-200">
                   Chi tiết giáo án &rarr;
                 </span>
               </div>
@@ -549,13 +576,23 @@ function Place() {
               tìm đến đúng lớp học.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
-              <Button asChild variant="gold" size="lg">
+              <Button
+                asChild
+                variant="gold"
+                size="lg"
+                className="group shadow-lg hover:shadow-gold/30 transition-all duration-300 hover:scale-[1.03] active:scale-[0.97]"
+              >
                 <a href={SITE.maps} target="_blank" rel="noreferrer">
-                  <MapPin className="size-4" />
+                  <MapPin className="size-4 group-hover:-translate-y-0.5 group-hover:scale-110 transition-transform duration-300" />
                   Mở Google Maps chỉ đường
                 </a>
               </Button>
-              <Button asChild variant="cream" size="lg" className="group">
+              <Button
+                asChild
+                variant="cream"
+                size="lg"
+                className="group shadow-lg transition-all duration-300 hover:scale-[1.03] active:scale-[0.97]"
+              >
                 <a href={SITE.tel}>
                   <Phone className="size-4 animate-phone-ring" />
                   Gọi hỏi đường ({SITE.phoneDisplay})

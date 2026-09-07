@@ -235,6 +235,87 @@
   .animate-marquee:hover {
     animation-play-state: paused;
   }
+
+  @keyframes float-slow {
+    0%, 100% {
+      transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+      transform: translateY(-10px) rotate(3deg);
+    }
+  }
+
+  @keyframes float-reverse {
+    0%, 100% {
+      transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+      transform: translateY(10px) rotate(-3deg);
+    }
+  }
+
+  @keyframes shimmer-sweep {
+    0% {
+      background-position: -200% 0;
+    }
+    100% {
+      background-position: 200% 0;
+    }
+  }
+
+  @keyframes soft-glow {
+    0%, 100% {
+      opacity: 0.5;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 0.9;
+      transform: scale(1.06);
+    }
+  }
+
+  .animate-float-slow {
+    animation: float-slow 6s ease-in-out infinite;
+  }
+
+  .animate-float-reverse {
+    animation: float-reverse 7s ease-in-out infinite;
+  }
+
+  @keyframes badge-glow {
+    0%, 100% {
+      box-shadow: 0 0 0 0 rgba(196, 150, 26, 0.3), inset 0 0 4px rgba(196, 150, 26, 0.15);
+    }
+    50% {
+      box-shadow: 0 0 14px 2px rgba(224, 184, 74, 0.45), inset 0 0 10px rgba(224, 184, 74, 0.25);
+    }
+  }
+
+  .shimmer-badge {
+    background: linear-gradient(
+      110deg,
+      rgba(196, 150, 26, 0.15) 0%,
+      rgba(196, 150, 26, 0.2) 30%,
+      rgba(255, 230, 130, 0.45) 50%,
+      rgba(196, 150, 26, 0.2) 70%,
+      rgba(196, 150, 26, 0.15) 100%
+    );
+    background-size: 200% 100%;
+    animation: shimmer-sweep 3.2s linear infinite, badge-glow 3.2s ease-in-out infinite;
+  }
+
+  .shimmer-badge-mini {
+    background: linear-gradient(
+      110deg,
+      rgba(196, 150, 26, 0.15) 0%,
+      rgba(196, 150, 26, 0.2) 30%,
+      rgba(255, 230, 130, 0.45) 50%,
+      rgba(196, 150, 26, 0.2) 70%,
+      rgba(196, 150, 26, 0.15) 100%
+    );
+    background-size: 200% 100%;
+    animation: shimmer-sweep 3.2s linear infinite, badge-glow 3.2s ease-in-out infinite;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
