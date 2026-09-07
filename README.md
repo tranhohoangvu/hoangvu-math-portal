@@ -14,9 +14,9 @@ A modern, high-performance, responsive single-page web portal built with **React
 
 ## 📌 Project Overview
 
-**Hoang Vu Math Portal** is an online admissions and informational web portal built for **Tran Hoang Vu Secondary Math Education Center**.
+**Hoang Vu Math Portal** is an online admissions and informational web portal built for **Tran Hoang Vu Math Knowledge Enrichment Center**.
 
-The portal serves as a digital bridge connecting students and parents:
+The portal serves as a digital bridge connecting the education center with students and parents:
 - **Curriculum & Programs**: Explore mathematics curricula for Grades 6–9, Gifted Olympiad preparation, and High School Entrance Exam prep.
 - **Online Admission**: Dynamic enrollment form that auto-formats messaging payloads for quick Zalo / direct phone inquiries.
 - **Interactive Math Widget**: Engaging daily math practice module tailored to each grade level.
