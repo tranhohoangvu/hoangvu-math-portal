@@ -39,10 +39,14 @@ export function Nav() {
           ))}
         </nav>
         <div className="flex items-center gap-2">
-          <Button asChild size="sm" className="hidden sm:inline-flex group">
+          <Button
+            asChild
+            size="sm"
+            className="hidden sm:inline-flex group shimmer-btn-navy bg-navy text-cream border border-gold/40 shadow-md hover:bg-navy-mid transition-all hover:scale-105 active:scale-95"
+          >
             <a href={SITE.tel}>
               <Phone className="size-4 animate-phone-ring text-gold-soft" />
-              {SITE.phoneDisplay}
+              <span>{SITE.phoneDisplay}</span>
             </a>
           </Button>
           <button
